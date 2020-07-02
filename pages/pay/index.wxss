@@ -1,0 +1,115 @@
+page {
+  padding-bottom: 50rpx;
+  background-color: #fff;
+}
+.revice_address_row {
+  margin-top: 10rpx;
+}
+.revice_address_row .address_btn button {
+  width: 80%;
+  margin: 0 auto;
+}
+.revice_address_row .user_content {
+  display: flex;
+  padding: 10rpx;
+}
+.revice_address_row .user_content .user_info {
+  flex: 5;
+}
+.revice_address_row .user_content .user_phone {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_main .cart_item {
+  display: flex;
+  padding: 10rpx;
+  border-bottom: 1px solid #ccc;
+}
+.cart_main .cart_item .cart_img_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+}
+.cart_main .cart_item .cart_img_wrap image {
+  width: 80%;
+}
+.cart_main .cart_item .cart_info_wrap {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cart_main .cart_item .cart_info_wrap .goods_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #666;
+}
+.cart_main .cart_item .cart_info_wrap .goods_price_wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart_main .cart_item .cart_info_wrap .goods_price_wrap .goods_price {
+  color: var(--red);
+}
+.cart_main .cart_item .cart_info_wrap .goods_price_wrap .cart_num_tool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_main .cart_item .cart_info_wrap .goods_price_wrap .cart_num_tool .goods_num {
+  display: flex;
+  width: 55rpx;
+  justify-content: center;
+  align-items: center;
+}
+.cart_main .null {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer_tool {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 100rpx;
+  background-color: #fff;
+  display: flex;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.footer_tool .all_chk_wrap {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_tool .total_price_wrap {
+  flex: 5;
+  padding-right: 15rpx;
+  text-align: right;
+}
+.footer_tool .total_price_wrap .total_price .total_price_text {
+  color: var(--red);
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.footer_tool .bg-green.submit {
+  flex: 3;
+  font-size: 32rpx;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

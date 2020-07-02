@@ -1,0 +1,4 @@
+<cu-custom bgColor="bg-gradual-pink" isCustom>
+  <view slot="content">登录</view>
+</cu-custom>
+<button type="primary" plain="{{true}}" open-type="getUserInfo" bindgetuserinfo="handleGetuserinfo">登录</button>

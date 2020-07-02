@@ -1,0 +1,50 @@
+<cu-custom bgColor="bg-gradual-pink" isCustom>
+  <view slot="content">商品详情</view>
+</cu-custom>
+<view class="detail_swiper">
+    <swiper autoplay="{{true}}" circular="{{true}}" indicator-dots="{{true}}">
+        <swiper-item wx:for="{{goodsObj.pics}}" wx:key="pics_id" bindtap="handlePreviewImage" data-url="{{item.pics_mid}}">
+            <image class="" src="{{item.pics_mid}}" mode="widthFix"/>
+        </swiper-item>
+    </swiper>    
+</view>
+<view class="goods_price">{{goodsObj.goods_price}}</view>
+<view class="goods_name_row">
+    <view class="goods_name">{{goodsObj.goods_name}}</view>
+    <view class="goods_collect" bind:tap="handleCollect">     
+        <text class="iconfont {{isCollect ? 'icon-shoucang1' :'icon-shoucang'}} "></text>
+        <text class="collect_text">收藏</text>
+    </view>
+</view>
+<view class="goods_info">
+    <view class="goods_info_title">图文详情</view>
+    <view class="goods_info_content">
+        <rich-text class="" nodes="{{goodsObj.goods_introduce}}">
+        </rich-text>    
+    </view>
+</view>
+<view class="cu-bar bg-white tabbar border shop sb">
+    <button class="action" open-type="contact">
+    <view class="cuIcon-service text-green">
+        <view class="cu-tag badge"></view>
+      </view>
+      客服
+    </button>
+     <button class="action" open-type="share">
+      <view class="iconfont icon-yixianshi-  fenxiang">
+      </view>
+      分享
+    </button>
+    <navigator class="action" url="/pages/cart/index" open-type="switchTab">
+      <view class="cuIcon-cart">
+        <view class="cu-tag badge">{{totalNum1}}</view>
+      </view>
+      购物车
+    </navigator> 
+    <view class="bg-orange submit" bindtap="handleCartAdd">加入购物车</view>
+    <view class="bg-red submit"  bindtap="handleCartAdd">立即订购</view>
+  </view>
+  
+
+  
+

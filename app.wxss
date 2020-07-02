@@ -1,0 +1,25 @@
+@import "./style/iconfont.wxss";
+@import "./colorui/main.wxss";
+@import "./colorui/icon.wxss";
+view,
+text,
+navigator,
+input,
+image,
+swiper,
+swiper-item,
+scroll-view,
+page {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+page{
+    /* --themeColor:bg-red; */
+  font-size: 28rpx;
+  /* color: #666; */
+}
+image{
+  width: 100%;
+  /* display: block; */
+}

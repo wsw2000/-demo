@@ -1,0 +1,22 @@
+<cu-custom bgColor="bg-gradual-pink" isCustom>
+  <view slot="content">搜索</view>
+</cu-custom>
+<view class="search_row">
+  <input value="{{checkInpu}}" placeholder="请输入您要搜索的商品" bindinput="handleChange" />
+  <button hidden="{{isFocus}}" bindtap="changFocus">取消</button>
+</view>
+<view class="search_title">
+  <view class="title">热门搜索</view>
+  <view class="menu">
+    <view wx:for="{{list}}" wx:key="id">
+      <button size="mini" bindtap="btnchange" data-name="{{item.name}}">
+        <text class="text-gray">{{item.name}}</text>
+      </button>
+    </view>
+  </view>
+</view>
+<view class="search_content" wx:if="{{checkInpu === ''}}">
+  <navigator class="search_item" wx:for="{{goods}}" wx:key="goods_id" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+    {{item.goods_name}}
+  </navigator>
+</view>

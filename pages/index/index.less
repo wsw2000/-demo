@@ -1,0 +1,49 @@
+.index_cate{
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    height:280rpx;
+    display: flex;
+        navigator{
+            padding-top: 20rpx;
+            flex: 1;
+            image{
+                width: 100%;
+            }
+        }
+}
+.index_floor{
+    .floor_group{
+        .floor_title{
+            padding: 10rpx;
+            image{
+                
+                width: 100%;
+            }
+        }
+    }
+    .floor_list{
+        //清除浮动
+        overflow: hidden;
+        navigator{
+            float: left;
+            width: 33%;
+               // 第一张图宽高为 232*386
+            // 232/386 = 33vw/ ?
+            // 后四个超链接/
+            &:nth-last-child(-n+4){
+                height: 386 * 33vw /232 /2;
+                border: 10rpx solid #ffffff;
+            }
+            &:nth-child(2),
+            &:nth-child(3){
+                border: 10rpx solid #ffffff;
+
+            }
+            image{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+page {
+  position: relative;
+}
+.detail_swiper swiper {
+  height: 65vw;
+  text-align: center;
+  background-color: #ffffff;
+}
+.detail_swiper swiper image {
+  width: 60%;
+}
+.goods_price {
+  padding: 15rpx;
+  font-size: 32rpx;
+  color: var(--red);
+  font-weight: 600;
+}
+.goods_name_row {
+  border-bottom: 5rpx solid #dedede;
+  padding: 10rpx 0;
+  display: flex;
+  flex-direction: row;
+}
+.goods_name_row .goods_name {
+  border-right: 5rpx solid #dedede;
+  flex: 5;
+  color: #000;
+  font-size: 28rpx;
+  padding: 0 10rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.goods_name_row .goods_collect {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.goods_name_row .goods_collect .icon-shoucang1 {
+  color: orange;
+}
+.goods_info .goods_info_title {
+  color: var(--red);
+  font-size: 32rpx;
+  font-weight: 600;
+  padding: 20rpx;
+}
+.sb {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}

@@ -1,0 +1,65 @@
+.index_cate {
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 10px;
+  height: 280rpx;
+  display: flex;
+}
+.index_cate navigator {
+  padding-top: 20rpx;
+  flex: 1;
+}
+.index_cate navigator image {
+  width: 100%;
+}
+.index_floor .floor_group .floor_title {
+  padding: 10rpx;
+}
+.index_floor .floor_group .floor_title image {
+  width: 100%;
+}
+.index_floor .floor_list {
+  overflow: hidden;
+}
+.index_floor .floor_list navigator {
+  float: left;
+  width: 33%;
+}
+.index_floor .floor_list navigator:nth-last-child(-n+4) {
+  height: 27.45258621vw;
+  border: 10rpx solid #ffffff;
+}
+.index_floor .floor_list navigator:nth-child(2),
+.index_floor .floor_list navigator:nth-child(3) {
+  border: 10rpx solid #ffffff;
+}
+.index_floor .floor_list navigator image {
+  width: 100%;
+  height: 100%;
+}
+
+.wx-swiper-dots.wx-swiper-dots-horizontal{
+  margin-bottom: 0rpx;
+  float: left;
+  text-align: center;
+}
+.wx-swiper-dot::before{
+  content: '';
+  flex-grow: 1;
+  background: #bbb;
+  border-radius: 15rpx;
+  border: 0rpx;
+}
+.wx-swiper-dot.wx-swiper-dot{
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 15rpx;
+  background:  #bbb;
+}
+.wx-swiper-dot.wx-swiper-dot-active{
+  width: 40rpx;
+  height: 15rpx;
+  border-radius: 15rpx;
+  background:  #bbb;
+}
+

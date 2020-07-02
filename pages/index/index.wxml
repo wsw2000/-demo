@@ -1,0 +1,46 @@
+<cu-custom bgColor="bg-gradual-pink">
+  <view slot="content">shopDemo</view>
+</cu-custom>
+<view>
+  <SearchInput></SearchInput>
+  <swiper class="card-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="3000" duration="200" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+    <swiper-item  wx:for="{{swiperList}}" wx:key="goods_id" class="{{cardCur==index?'cur':''}}">
+      <navigator class="swiper-item" url="{{item.navigator_url}}">
+        <image src="{{item.image_src}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+        <video src="{{item.image_src}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+      </navigator>
+    </swiper-item>
+  </swiper>
+  <!-- 导航 -->
+  <swiper autoplay="{{true}}" circular="{{true}}" indicator-dots="{{true}}"  interval="5000">
+    <swiper-item>
+      <view class="index_cate cu-card case no-card">
+        <navigator class="cu-item" open-type="switchTab" wx:for="{{catesList}}" wx:key="name" url="/pages/category/index">
+          <image src="{{item.image_src}}" mode="widthFix"></image>
+        </navigator>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="index_cate cu-card case no-card">
+        <navigator class="cu-item" open-type="switchTab" wx:for="{{catesList}}" wx:key="name" url="/pages/category/index">
+          <image src="{{item.image_src}}" mode="widthFix"></image>
+        </navigator>
+      </view>
+    </swiper-item>
+  </swiper>
+  <!-- 楼层 -->
+  <view class="index_floor">
+    <view class="floor_group" wx:for="{{floorList}}" wx:for-item="item1" wx:for-index="index1" wx:key="floor_title">
+      <!-- 标题 -->
+      <view class="floor_title">
+        <image mode="widthFix" src="{{item1.floor_title.image_src}}" />
+      </view>
+      <!-- 内容 -->
+      <view class="floor_list">
+        <navigator open-type="navigate" wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="name" url="{{item2.navigator_url}}">
+          <image mode="{{index2 ===0 ? 'widthFix' :'scaleToFill'}}" src="{{item2.image_src}}" />
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
